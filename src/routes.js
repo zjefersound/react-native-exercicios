@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, globalheet } from 'react-native';
-import global from './styles/global';
-import Parimpar from './components/ParImpar';
-import { Inverter } from './components/Multi';
-//1 componente 
-import Simples from './components/Simples';
-//array de componentes
-import ManySimples from './components/ManySimples';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator} from '@react-navigation/drawer';
 
-const num = 2343421;
+import Parimpar from './pages/ParImpar';
+import MegaSena from './pages/MegaSena';
+import Home from './pages/Home';
+
+const AppDrawer = createDrawerNavigator();
 
 export default function Routes() {
-    return(
-      <View style={ global.container }>
-        <Simples texto = { num+' é Par ou Ímpar?' } />
-        <Parimpar numero = { num }/>
-        <Inverter texto = {'ANA BACANA'} />
-      </View>
+    return(      
+      <NavigationContainer>
+        <StatusBar barStyle="light-content" backgroundColor='#2F6F4F' />
+        <AppDrawer.Navigator initialRouteName="Home">
+          <AppDrawer.Screen  name="Home" component = {Home} />
+          <AppDrawer.Screen  name="MegaSena" component = {MegaSena} />
+          {/*<AppDrawer.Screen  name="ParImpar" component = {ParImpar} />*/}
+        </AppDrawer.Navigator>
+      </NavigationContainer>
     );
 } 

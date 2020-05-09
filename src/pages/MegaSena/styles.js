@@ -1,6 +1,8 @@
+import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-const global = StyleSheet.create({
-    ex: {
+
+const styles = StyleSheet.create({
+    bloco_verde: {
         backgroundColor: '#2E8B57',
         paddingHorizontal: 15,
         paddingVertical: 15,
@@ -38,6 +40,7 @@ const global = StyleSheet.create({
         padding: 20,
         borderBottomColor: '#00FA9A',
         borderBottomWidth: 1,
-    }
+    }   
 });
-export default global;
+
+export default styles;
