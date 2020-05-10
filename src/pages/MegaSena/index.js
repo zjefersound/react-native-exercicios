@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { View, Button, Text, StatusBar } from 'react-native';
 
+//Estilos
 import styles from './styles';
+import global from './../../styles/global';
+
+//Componentes
+import NavBar from './../../components/NavBar';
 
 const MegaSenaComp = props => {
     const [min,max] = [1, 60];
@@ -24,10 +29,8 @@ export default function MegaSena({ navigation }){
     const num = 1;
 
     return(
-        <View style = { styles.container }>
-            <View style = { styles.header }>
-                <Text style = { styles.textHeader }>O pai ta on kkkkk</Text>
-            </View>
+        <View style = { global.container }>
+            <NavBar texto = 'MegaSena'/>
             <Text style = { styles.title }>MegaSena:</Text>
             <MegaSenaComp numeros = {6} />
             <Button style={styles.bloco_verde} onPress={() => navigation.goBack()} title="Go back home" />

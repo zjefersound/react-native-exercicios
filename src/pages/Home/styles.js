@@ -24,23 +24,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#00FA9A',
     },
-    textHeader: {
-        fontSize: 22,
-        color: '#00FA9A',
-    },
-    header: {
-        flexDirection: 'row',
-        height: 60,
-        width: Dimensions.get('window').width,
-        top: 0,
-        position: 'absolute',
-        alignItems: 'center',
-        backgroundColor: '#444',
-        justifyContent: 'space-between',
-        padding: 20,
-        borderBottomColor: '#00FA9A',
-        borderBottomWidth: 1,
-    }   
+     
 });
 
 export default styles;

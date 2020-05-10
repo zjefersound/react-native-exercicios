@@ -15,3 +15,11 @@ export default props => {
         
     );
 }
+//Retorna vários componentes
+export const ManySimples = props => {
+    return [    
+        <Text key={1} >Arrow 1: { props.texto }</Text>,
+        <Text key={2} >Arrow 2: { props.texto }</Text>,
+        <Text key={3} >Arrow 3: { props.texto }</Text>
+    ]  
+}

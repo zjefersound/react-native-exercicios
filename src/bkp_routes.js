@@ -1,3 +1,11 @@
+/**
+ * 
+ * 
+ * BACKUP DO ARQUIVO ROUTES ANTES DE ADD NAVEGAÇÃO
+ * 
+ * 
+ */
+
 import React, { Component } from 'react';
 import { View, Text, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';

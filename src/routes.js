@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator} from '@react-navigation/drawer';
 
-import Parimpar from './pages/ParImpar';
+import ParImpar from './pages/ParImpar';
 import MegaSena from './pages/MegaSena';
 import Home from './pages/Home';
 
@@ -16,7 +16,7 @@ export default function Routes() {
         <AppDrawer.Navigator initialRouteName="Home">
           <AppDrawer.Screen  name="Home" component = {Home} />
           <AppDrawer.Screen  name="MegaSena" component = {MegaSena} />
-          {/*<AppDrawer.Screen  name="ParImpar" component = {ParImpar} />*/}
+          <AppDrawer.Screen  name="ParImpar" component = {ParImpar} />
         </AppDrawer.Navigator>
       </NavigationContainer>
     );

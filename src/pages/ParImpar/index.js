@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import { View, Button, Text, StatusBar } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
+//Estilos
+import styles from './styles';
+import global from './../../styles/global';
+
+//componentes
+import NavBar from './../../components/NavBar';
+import ParImparFunc from './../../components/ParImparFunc';
 
 
-//import { Inverter, MegaSena } from './../../components/Multi';
-import Simples from './../../components/Simples';
+export default function ParImpar({ navigation }){
 
-export default function ParImpar(){
-
-    const navigation = useNavigation();
+    const num = 1;
 
     return(
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title="Go to notifications"
-            />
+        <View style = { global.container }>
+            <NavBar texto = 'ParImpar'/>
+            <Text style = { global.title }>{`O número ${num} é:`}</Text>
+            <ParImparFunc numero={num} />
         </View>
     );
 } 
+

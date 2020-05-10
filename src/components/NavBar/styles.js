@@ -1,20 +1,6 @@
 import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-
 const styles = StyleSheet.create({
-    bloco_verde: {
-        backgroundColor: '#2E8B57',
-        paddingHorizontal: 15,
-        paddingVertical: 15,
-        marginVertical: 5,
-        color: "#FFF",
-        fontSize: 18,
-
-    },
-    title: {
-        fontSize: 30,
-        color: '#00FA9A',
-    },
     textHeader: {
         fontSize: 22,
         color: '#00FA9A',
@@ -31,7 +17,8 @@ const styles = StyleSheet.create({
         padding: 20,
         borderBottomColor: '#00FA9A',
         borderBottomWidth: 1,
-    }   
+    }  
 });
+
 
 export default styles;
