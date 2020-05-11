@@ -6,13 +6,13 @@ import styles from './styles';
 //Criando componente com classe
 export default class Contador extends Component{
     state = {
-        numero: 0
+        numero: this.props.numeroInicial,
     }
     maisUm = () => { 
-        this.setState({ numero: this.state.numero + 1 })
+        this.setState({ numero: this.state.numero + 1 });
     }
     limpar = () => { 
-        this.setState({ numero: 0 })
+        this.setState({ numero: this.props.numeroInicial });
     }
 
     render(){

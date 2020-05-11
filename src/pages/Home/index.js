@@ -17,7 +17,7 @@ export default function Home({ navigation }){
         <View style = { styles.container }>
             <NavBar texto = 'Home'/>
             <Text style = { styles.title }>Home page:</Text>
-            <Contador />
+            <Contador numeroInicial = {1000}/>
         </View>
     );
 } 

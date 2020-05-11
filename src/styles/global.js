@@ -22,5 +22,32 @@ const global = StyleSheet.create({
         fontSize: 30,
         color: '#00FA9A',
     },
+    input: {
+        marginTop: 20,
+        height: 70,
+        fontSize: 30,
+        color: '#00FA9A',
+        backgroundColor: '#444',
+        borderRadius: 35,
+        paddingHorizontal: 40,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+    },
+    input_btn: {
+        marginTop: 20,
+        height: 70,
+        backgroundColor: '#00FA9A',
+        borderRadius: 35,
+        paddingHorizontal: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    input_btn_text: {
+        color: '#282828',
+        fontSize: 25,
+    },
+    font40: {
+        fontSize: 40
+    }, 
 });
 export default global;
