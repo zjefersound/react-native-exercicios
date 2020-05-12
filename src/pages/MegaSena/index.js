@@ -33,7 +33,9 @@ export default function MegaSena({ navigation }){
             <NavBar texto = 'MegaSena'/>
             <Text style = { styles.title }>MegaSena:</Text>
             <MegaSenaComp numeros = {6} />
-            <Button style={styles.bloco_verde} onPress={() => navigation.goBack()} title="Go back home" />
+            <Button style = { styles.bloco_verde } 
+            onPress = { () => navigation.goBack() } 
+            title = "Go back home" />
 
         </View>
     );

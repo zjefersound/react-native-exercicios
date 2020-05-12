@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    contbox:{
+    contbox: {
         marginTop: 20,
         height: 300,
         backgroundColor: '#87b06f',
@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
         fontSize: 35,
         color: '#3c4d32'
     },
-    numero:{
+    numero: {
         fontSize: 40,
         color: "#FFF",
     },
-    botao:{
+    botao: {
         bottom: 0,
         backgroundColor: '#FFF',
         paddingHorizontal: 30,

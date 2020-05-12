@@ -23,7 +23,7 @@ export default class Contador extends Component{
                 <TouchableHighlight
                     style = { styles.botao }
                     onPress = { this.maisUm }
-                    onLongPress = {this.limpar}
+                    onLongPress = { this.limpar }
                     underlayColor = '#d5f0c7'
                     >
                     <Text style = { styles.botao_text }>Incrementar/zerar</Text>

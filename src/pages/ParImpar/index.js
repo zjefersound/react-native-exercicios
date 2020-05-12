@@ -17,8 +17,8 @@ export default function ParImpar({ navigation }){
     return(
         <View style = { global.container }>
             <NavBar texto = 'ParImpar'/>
-            <Text style = { global.title }>{`O número ${num} é:`}</Text>
-            <ParImparFunc numero={num} />
+            <Text style = { global.title }>{ `O número ${num} é:` }</Text>
+            <ParImparFunc numero = { num } />
         </View>
     );
 } 

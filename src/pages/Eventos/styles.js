@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    painel:{
+    painel: {
         backgroundColor: '#333',
         marginVertical:20,
         minHeight: 80,

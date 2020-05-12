@@ -5,7 +5,7 @@ import styles from './styles';
 const NavBar = props => {
     return(
         <View style = { styles.header }>
-            <Text style = { styles.textHeader }>{props.texto}</Text>
+            <Text style = { styles.textHeader }>{ props.texto }</Text>
         </View>
     );
 }

@@ -8,8 +8,8 @@ const ValidarPropsFunc = (props) => {
     return(
         <View style = { styles.validarbox }>
             <Text style = { styles.title }>
-                {props.label}
-                {props.ano + 2000}
+                { props.label }
+                { props.ano + 2000 }
             </Text>
         </View>
     );

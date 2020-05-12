@@ -23,7 +23,7 @@ class Evento extends Component {
             <View>
                 <View style = {styles.painel}>
                     <Text style = { global.title } >
-                        {this.state.texto}
+                        { this.state.texto }
                     </Text>
                 </View>
                 <TextInput 
