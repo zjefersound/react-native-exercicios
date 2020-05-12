@@ -5,39 +5,33 @@
  * 
  * 
  */
-
 import React, { Component } from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
 
-import global from './styles/global';
-import Parimpar from './components/ParImpar';
-import { Inverter, MegaSena } from './components/Multi';
-//1 componente 
-import Simples from './components/Simples';
-//array de componentes
-import ManySimples from './components/ManySimples';
+import ParImpar from './pages/ParImpar';
+import MegaSena from './pages/MegaSena';
+import Home from './pages/Home';
+import ValidarProps from './pages/ValidarProps';
+import Eventos from './pages/Eventos';
+import ComunicacaoDireta from './pages/ComunicacaoDireta';
 
-
-const AppStack = createStackNavigator();
-const num = 1;
+const AppDrawer = createDrawerNavigator();
 
 export default function Routes() {
-    return(
+    return(      
       <NavigationContainer>
         <StatusBar barStyle="light-content" backgroundColor='#2F6F4F' />
-        <View style = { global.container }>
-          <View style = { global.header }>
-            <Text style = { global.textHeader }>O pai ta on kkkkk VAPOVAPOVAPO</Text>
-          </View>
-          <Simples texto = { num+' é par sou ímpar?' } />
-          <Parimpar numero = { num } />
-          {/* <Inverter texto = {'subi no onibus'} /> */}
-          <Text style = { global.title }>MegaSena:</Text>
-          <MegaSena numeros = {6} />
-          
-        </View>
+        <AppDrawer.Navigator drawerStyle = {{ backgroundColor: '#CFC' }} initialRouteName="Home">
+          <AppDrawer.Screen  name="Home" component = { Home } />
+          <AppDrawer.Screen  name="Eventos" component = { Eventos } />
+          <AppDrawer.Screen  name="Comunicação Direta" component = { ComunicacaoDireta } />
+          <AppDrawer.Screen  name="MegaSena" component = { MegaSena } />
+          <AppDrawer.Screen  name="ParImpar" component = { ParImpar } />
+          <AppDrawer.Screen  name="ValidarProps" component = { ValidarProps } />
+
+        </AppDrawer.Navigator>
       </NavigationContainer>
     );
 } 

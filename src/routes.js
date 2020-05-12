@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { StatusBar } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
+import { StatusBar, SafeAreaView, ScrollView, Dimensions } from 'react-native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
+import { createDrawerNavigator, DrawerItems } from '@react-navigation/drawer';
 
 import ParImpar from './pages/ParImpar';
 import MegaSena from './pages/MegaSena';
@@ -10,13 +10,20 @@ import ValidarProps from './pages/ValidarProps';
 import Eventos from './pages/Eventos';
 import ComunicacaoDireta from './pages/ComunicacaoDireta';
 
+const CustomDrawerComponent = props => 
+  <SafeAreaView style = {{ flex: 1 }}>
+    <ScrollView>
+      <DrawerItems { ...props }/>
+    </ScrollView>
+  </SafeAreaView>
+
 const AppDrawer = createDrawerNavigator();
 
 export default function Routes() {
     return(      
-      <NavigationContainer>
+      <NavigationContainer theme = { DarkTheme }>
         <StatusBar barStyle="light-content" backgroundColor='#2F6F4F' />
-        <AppDrawer.Navigator drawerStyle = {{ backgroundColor: '#CFC' }} initialRouteName="Home">
+        <AppDrawer.Navigator initialRouteName="Home">
           <AppDrawer.Screen  name="Home" component = { Home } />
           <AppDrawer.Screen  name="Eventos" component = { Eventos } />
           <AppDrawer.Screen  name="Comunicação Direta" component = { ComunicacaoDireta } />
