@@ -7,14 +7,14 @@ import global from './../../styles/global';
 
 //componentes
 import NavBar from './../../components/NavBar';
-import { Avo } from './../../components/ComDireta';
+import { Entrada } from './../../components/ComIndireta';
 
-export default function ComunicacaoDireta({ navigation }){
-    
+export default function ComunicacaoIndireta({ navigation }){
+
     return(
         <View style = { global.container }>
-            <NavBar texto = 'Comunicação direta via props' />
-            <Avo nome = 'Mr Catra' sobrenome = 'Silva' />
+            <NavBar texto = 'Comunicação indireta via props' />
+            <Entrada />
         </View>
     );
 } 

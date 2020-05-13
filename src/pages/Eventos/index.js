@@ -33,9 +33,8 @@ class Evento extends Component {
                 onChangeText = { this.alterarTexto } />
                 <TouchableHighlight
                     style = { global.input_btn }
-                    onPress = { this.limparTexto}
-                    underlayColor = '#2F6F4F'
-                    >
+                    onPress = { this.limparTexto }
+                    underlayColor = '#2F6F4F' >
                     <Text style = { global.input_btn_text } >Limpar</Text>
                 </TouchableHighlight>
             </View>

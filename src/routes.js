@@ -9,24 +9,21 @@ import Home from './pages/Home';
 import ValidarProps from './pages/ValidarProps';
 import Eventos from './pages/Eventos';
 import ComunicacaoDireta from './pages/ComunicacaoDireta';
+import ComunicacaoIndireta from './pages/ComunicacaoIndireta';
 
-const CustomDrawerComponent = props => 
-  <SafeAreaView style = {{ flex: 1 }}>
-    <ScrollView>
-      <DrawerItems { ...props }/>
-    </ScrollView>
-  </SafeAreaView>
+import GreenTheme from './Themes/GreenTheme';
 
 const AppDrawer = createDrawerNavigator();
 
 export default function Routes() {
     return(      
-      <NavigationContainer theme = { DarkTheme }>
+      <NavigationContainer theme = { GreenTheme }>
         <StatusBar barStyle="light-content" backgroundColor='#2F6F4F' />
         <AppDrawer.Navigator initialRouteName="Home">
           <AppDrawer.Screen  name="Home" component = { Home } />
           <AppDrawer.Screen  name="Eventos" component = { Eventos } />
           <AppDrawer.Screen  name="Comunicação Direta" component = { ComunicacaoDireta } />
+          <AppDrawer.Screen  name="Comunicação Indireta" component = { ComunicacaoIndireta } />
           <AppDrawer.Screen  name="MegaSena" component = { MegaSena } />
           <AppDrawer.Screen  name="ParImpar" component = { ParImpar } />
           <AppDrawer.Screen  name="ValidarProps" component = { ValidarProps } />
