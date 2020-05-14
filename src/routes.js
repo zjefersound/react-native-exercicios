@@ -10,6 +10,7 @@ import ValidarProps from './pages/ValidarProps';
 import Eventos from './pages/Eventos';
 import ComunicacaoDireta from './pages/ComunicacaoDireta';
 import ComunicacaoIndireta from './pages/ComunicacaoIndireta';
+import Calculadora from './pages/Calculadora';
 
 import GreenTheme from './Themes/GreenTheme';
 
@@ -27,6 +28,7 @@ export default function Routes() {
           <AppDrawer.Screen  name="MegaSena" component = { MegaSena } />
           <AppDrawer.Screen  name="ParImpar" component = { ParImpar } />
           <AppDrawer.Screen  name="ValidarProps" component = { ValidarProps } />
+          <AppDrawer.Screen  name="Calculadora" component = { Calculadora } />
 
         </AppDrawer.Navigator>
       </NavigationContainer>
