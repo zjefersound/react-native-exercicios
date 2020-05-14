@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import { View, Text, TouchableHighlight, ScrollView } from 'react-native';
 
 //Estilos
 import styles from './styles';
@@ -69,7 +69,7 @@ export const Painel = props => {
                 }
                 break;
             default:
-                res = num
+                res = Number(num);
         }
         setResult( String(res) );
     }

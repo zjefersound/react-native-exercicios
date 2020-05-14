@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#222'
     },
     result_block: {
-        flex: 2,
+        flex: 3,
         paddingVertical: 25,
         backgroundColor: '#465',
         borderColor: '#00FA9A',

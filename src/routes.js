@@ -11,6 +11,7 @@ import Eventos from './pages/Eventos';
 import ComunicacaoDireta from './pages/ComunicacaoDireta';
 import ComunicacaoIndireta from './pages/ComunicacaoIndireta';
 import Calculadora from './pages/Calculadora';
+import ListaAlunos from './pages/ListaAlunos';
 
 import GreenTheme from './Themes/GreenTheme';
 
@@ -29,6 +30,7 @@ export default function Routes() {
           <AppDrawer.Screen  name="ParImpar" component = { ParImpar } />
           <AppDrawer.Screen  name="ValidarProps" component = { ValidarProps } />
           <AppDrawer.Screen  name="Calculadora" component = { Calculadora } />
+          <AppDrawer.Screen  name="Lista de alunos" component = { ListaAlunos } />
 
         </AppDrawer.Navigator>
       </NavigationContainer>
