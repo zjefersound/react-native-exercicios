@@ -30,12 +30,40 @@ import global from './../../styles/global';
 //Componentes
 import NavBar from './../../components/NavBar';
 
-export default function ListaAlunos({ navigation }){
+export const Aluno = props => { 
+    return(
+        <View style = { styles.itemEstilo }>
+            <Text>Nome: { props.nome }</Text>
+            <Text style = {{ fontWeight: 'bold' }}>Nota: { props.nota }</Text>
+        </View>
+    );
+}
+
+export const Renderizar = props => {
+    const renderItem = ({ item }) => {
+        return(
+            <Aluno { ...item } />
+        );
+    }
 
     return(
         <View style = { global.container }>
             <NavBar texto = 'Lista de alunos'/>
-
+            <ScrollView style = { styles.painel }>
+                <FlatList data = { alunos } 
+                        renderItem = { renderItem } 
+                        keyExtractor = { (_,index) => {
+                            return index.toString();
+                        } }/>
+            </ScrollView>
         </View>
+    );
+}
+
+
+export default function ListaAlunos({ navigation }){
+
+    return(    
+        <Renderizar />  
     );
 } 

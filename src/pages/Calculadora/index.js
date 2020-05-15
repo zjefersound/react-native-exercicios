@@ -39,7 +39,7 @@ export const Painel = props => {
                 new_num = text.join('');
                 setNum2(new_num);
             }else if(num2 == '' && operacao != ''){
-                setOperacao('')
+                setOperacao('');
             }else{
                 text = String(num).split('');
                 text.pop();
