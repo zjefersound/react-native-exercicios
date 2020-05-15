@@ -14,6 +14,7 @@ import Calculadora from './pages/Calculadora';
 import ListaAlunos from './pages/ListaAlunos';
 
 import GreenTheme from './Themes/GreenTheme';
+import Flexbox from './pages/Flexbox';
 
 const AppDrawer = createDrawerNavigator();
 
@@ -31,6 +32,7 @@ export default function Routes() {
           <AppDrawer.Screen  name="ValidarProps" component = { ValidarProps } />
           <AppDrawer.Screen  name="Calculadora" component = { Calculadora } />
           <AppDrawer.Screen  name="Lista de alunos" component = { ListaAlunos } />
+          <AppDrawer.Screen  name="Flexbox" component = { Flexbox } />
 
         </AppDrawer.Navigator>
       </NavigationContainer>
